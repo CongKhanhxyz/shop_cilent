@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Antique+B1&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    transition: all linear .2s;
+}
+
+body{
+    background-color: #f5f5fa;
+}
+
+
+.header {
+    display: flex;
+    background-color: white;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 20px 0 20px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .1);
+}
+
+.header .logo img{
+    width: 100px;
+    height: auto;
+}
+.header .status{
+    width: 40%;
+    /* font-family: 'Shippori Antique B1', sans-serif; */
+}
+
+.header .status .title{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.header .status .title span:nth-child(1){
+    display: inline-block;
+    margin-right: 100px;
+    transform: translateX(-40%);
+}
+
+.header .status .title span:nth-child(2){
+    margin-right: 40px;
+}
+.header .status .title span:nth-child(3)
+{
+    display: inline-block;
+    transform: translateX(50%);
+}
+
+.header .status .processbar{
+    width: 100%;
+    height: 10px;
+    position: relative;
+    background-color: #ccc;
+    border-radius: 10px;
+}
+.header .status .processbar::before{
+    content: '1';
+    display: flex;
+    border: .2px solid #ccc;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #00b6f0;
+    transform: translateX(-25%) translateY(-25%);
+    box-shadow: 240px 0 0 #00b6f0;
+}
+
+.header .status .processbar::after{
+    content: '3';
+    position: absolute;
+    border: .2px solid #ccc;
+    width: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20px;
+    right: -5px;
+    border-radius: 50%;
+    background-color: #00b6f0;
+    transform: translateY(-78%);
+}
+
+.header .status .processbar .percent{
+    width: 100% !important;
+    height: 100%;
+    background-color: #00b6f0;
+}
+
+.header .contact{
+    display: flex;
+    font-family: 'Shippori Antique B1', sans-serif;
+    align-items: center;
+    justify-content: center;
+    border: .5px solid #ccc;
+    padding: 5px 8px;
+    border-radius: 60px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, .2),
+                -1px -1px 3px rgba(0, 0, 0, .1);
+}
+
+.header .contact a{
+    font-size: 24px;
+    color: white;
+    margin-right: 10px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border:1px solid black;
+    border-radius: 50%;
+    background-color: #00b6f0;
+}
+
+.header .contact a em{
+    display: inline-block;
+    margin: 0 0.5rem;
+  
+    animation: tada infinite; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s; /* don't forget to set a duration! */
+}
+
+.header .contact p{
+    font-size: 18px;
+    color: #2ca62c;
+    padding: 0;
+    margin: 0;
+}
+
+.main{
+    padding: 50px 50px;
+    font-family: 'Shippori Antique B1', sans-serif;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    border: .5px solid #ccc;
+}
+
+.container .icons{
+    width: 25%;
+}
+
+.container .icons img{
+    width: 100%;
+    height: auto;
+    background-size: cover;
+}
+
+.container-item{
+    padding: 0 20px;
+}
+
+.container-item p{
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.container-item p:nth-child(1){
+    color: #00b6f0;
+}
+
+.container-item p:nth-child(3){
+    max-width: 200px;
+    padding: 15px 10px;
+    border-radius: 3px;
+    text-align: center;
+    background-color: #58b712;
+}
+
+.container-item .img{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.container-item .img img{
+    width: 30px;
+    height: auto;
+    background-size: cover;
+    transform: translateY(-6px);
+    margin-right: 10px;
+}
+
+.container-item p a{
+    color: #58b712;
+}
+
+.main a.order-continue{
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 10px;
+    border: .5px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: #ff424e;
+}

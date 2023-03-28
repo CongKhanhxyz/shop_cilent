@@ -1,0 +1,351 @@
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+.input-general:invalid{
+    border: 1px solid red;
+}
+.error-label::after{
+    margin-bottom: 11.7px;
+    color:red;
+    display: inline-block;
+}
+#product-name:invalid + .error-label::after {
+    content: 'Hãy nhập tên sản phẩm';
+}
+#quantity:invalid + .error-label::after {
+    content: 'Hãy nhập số lượng';
+}
+#oldPrice:invalid + .error-label::after {
+    content: 'Hãy nhập giá bán';
+}
+#product-name:invalid, #oldPrice:invalid, #quantity:invalid{
+    margin-bottom: 0px;
+}
+*{
+    margin:0;
+}
+a{
+    text-decoration: none;
+}
+input {
+    outline: none;
+    height: 40px;
+    padding: 0 12px;
+    font-size: 14px;
+    border:1px solid rgb(211 213 215);
+    border-radius: 5px;
+}
+input:hover{
+    border:1px solid #0F1824;
+}
+input:focus{
+    border:1px solid rgb(0, 136, 255);
+}
+img{
+    height:150px;
+    width:120px;
+}
+#avatar-img{
+    display: none;
+}
+#header{
+    height:52px;
+    width:100%;
+    box-shadow: 0px 2px 4px rgb(168 168 168/25%);
+    z-index: 1;
+    position: sticky;
+    min-width: 442px;
+    background:white;
+}
+.back-ico{
+    position: absolute;
+    color: #747C87;
+    top:13px;
+    cursor: pointer;
+}
+.link-back{
+    text-decoration:none;
+    font-weight:bold;
+    margin-left:30px;
+    font-size:16px;
+    color:#747C87;
+    cursor: pointer;
+}
+.head-block-1{
+    float:left;
+    padding: 15px 0px 15px 32px;
+    width:40%;
+}
+
+.head-block-2{
+    float:right;
+    min-width:80px;
+    padding: 6px 5px 0px 0px;
+}
+.head-block-3{
+    float:right;
+    min-width:100px;
+    padding-top:6px;
+    width:8%;
+}
+.but-cancel{
+    border:1px solid rgb(0, 136, 255);
+    border-radius:3px;
+    background: white;
+    color:rgb(0, 136, 255);
+    font-weight:bold;
+    font-size:14px;
+    padding:11px 20px 10px 20px;
+    cursor: pointer;
+}
+.but-cancel:hover{
+    background: #e6f4ff;
+}
+.but-save{
+    border:1px solid rgb(51, 160, 255);
+    border-radius:3px;
+    font-weight:bold;
+    font-size:14px;
+    padding:11px 20px 10px 20px;
+    color: white;
+    background:rgb(0, 136, 255);
+    cursor: pointer;
+}
+.but-save:hover{
+    background:rgb(51, 160, 255);
+}
+.body{
+    background: #f0f1f1;
+    width: auto;
+    height: auto;
+    margin-top: 35px;
+    padding: 0px 0px 16px 4%;
+
+}
+.box-shadow{
+    box-shadow: 0px 2px 4px rgb(168 168 168/25%);
+}
+.book-name-title{
+    text-transform: capitalize;
+    font-size: 20px;
+    font-family:sans-serif;
+    line-height: 24px;
+    padding: 30px 0px 30px 0px;
+}
+.general-info{
+    float: left;
+    width: 60%;
+    min-width: 430px;
+    margin-right: 4%;
+    margin-bottom: 30px;
+}
+.title{
+    font-weight: bold;
+    font-size: 16px;
+}
+.block-info-1{
+    background:white;
+    padding: 20px 30px 20px 30px;
+    border-bottom: 1px solid #E8EAEB;
+
+}
+.block-info-2{
+    background: white;
+    padding: 20px 30px 20px 30px;
+
+}
+.input-general{
+    width: -webkit-fill-available;
+    margin: 5px 0px 30px 0px;
+}
+.label-color{
+    color:#46515F;
+}
+.star-require{
+    display:inline;
+    color:red;
+}
+.choose-img{
+    margin-top: 10px;
+    margin-left: 40%;
+    padding: 40px 40px 40px 46px;
+    border: 1px dashed black;
+    width: 18px;
+    cursor: pointer;
+}
+.div-avatar-img{
+    position: relative;
+    width: fit-content;
+    margin-left: 40%;
+}
+.cancel-but-red{
+    position: absolute;
+    cursor: pointer;
+    top: -5px;
+    right: -7px;
+    color: white;
+    background: red;
+    border-radius: 20px;
+    font-size: 14px;
+    padding: 3px 2px 2px 2px;
+    display: none;
+}
+.filter-info{
+    float: left;
+    width: 30%;
+    min-width: 300px;
+    margin-right: 2%;
+    margin-bottom: 30px;
+}
+.bold-title{
+    font-weight:bold;
+    margin-bottom: 10px;
+    color: #46515F;
+}
+.selector{
+    position: relative;
+    border:1px solid rgb(211 213 215);
+    border-radius: 5px;
+    padding: 10px 5px 10px 20px;
+    width: auto;
+    cursor: pointer;
+    z-index: 1000;
+}
+.selector:hover{
+    border:1px solid #0F1824;
+}
+.arrow-drop{
+    position: absolute;
+    top: 20%;
+    left: 90%;
+}
+.box-dropdown{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 41px;
+    left: 0px;
+    right: 0px;
+    display: none;
+    z-index:1000;
+    background:white;
+}
+.line-select{
+    cursor: pointer;
+    border-bottom: 1px solid #E8EAEB;
+    padding: 10px 16px;
+    color: #0088FF;
+}
+.line-select:hover{
+    background-color: #F2F9FF;
+}
+.add-type{
+    position: relative;
+}
+.add-circle{
+    position: absolute;
+}
+.txt-add{
+    margin: 3px 0px 0px 41px;
+    font-weight: bold;
+    font-size: 16px;
+}
+.toggle {
+    position : relative ;
+    display : inline-block;
+    width : 35px;
+    height : 15px;
+    background-color: rgb(232, 234, 235);
+    border-radius: 30px;
+    cursor: pointer;
+}
+.toggle:after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: gray;
+    top: 0px;
+    left: 1px;
+    transition:  all 0.5s;
+}
+.checkbox:checked + .toggle::after {
+    left : 55%;
+    background-color: rgb(0, 136, 255);
+}
+.checkbox:checked + .toggle {
+    background-color: rgb(204, 231, 255);
+}
+.checkbox {
+    display : none;
+}
+.sale-info{
+    float: left;
+    margin: 0px 2% 10px 0px;
+    width: 30%;
+    min-width: 300px;
+}
+.sub-background{
+    position: absolute;
+    top: 0px;
+    padding-bottom: 30px;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    display: none;
+}
+.sub-tab{
+    position: fixed;
+    background: white;
+    top: 52px;
+    left: 30%;
+    border-radius: 4px;
+    z-index: 1300;
+    width: 40%;
+    padding: 15px 20px 15px 20px;
+}
+.close-icon{
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    color: #A3A8AF;
+    cursor: pointer;
+}
+#input-div{
+    padding: 30px;
+}
+.menu{
+    width: 200px;
+    height: 100%;
+    position: fixed;
+    background: #5197ff;
+    padding: 52px 0px 0px 0px;
+    z-index: 2;
+    border-right: 1px solid #e8eaeb;
+}
+.menu-bar{
+    margin: 0px 3px 0px 3px;
+    border-radius: 3px;
+    color: #F3F4F5;
+    font-size: 18px;
+    padding: 25px 5px 25px 5px;
+    border-top: 1px solid #E8EAEB;
+}
+.menu-bar:hover{
+    background: #e5e5e542;
+    color: white;
+    cursor: pointer;
+}
+.menu-icon{
+    float: left;
+}
+.menu-txt{
+    display: inline-block;
+    margin:3px 0px 0px 13px;
+}

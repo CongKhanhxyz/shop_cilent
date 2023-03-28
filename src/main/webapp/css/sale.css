@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+button {
+    cursor: pointer;
+}
+table th, table td{
+    padding-left: 20px;
+}
+#index {
+    margin-left: 200px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.box-shadow{
+    box-shadow: 0px 2px 4px rgb(168 168 168/25%);
+}
+.content {
+    margin-top: 20px;
+    padding: 0px 4% 0px 4%;
+    min-width: 410px;
+}
+.title{
+    border-bottom: 1px solid #e8eaeb;
+    font-weight: bold;
+    font-size: 20px;
+    color: #182537;
+    padding: 25px 0px 25px 40px;
+}
+.main-content table, #total-table table {
+    background: white;
+    width: 100%;
+    border-top: 1px solid #e8eaeb;
+    border-collapse: collapse;
+}
+
+.main-content tr {
+    height: 50px;
+    border-bottom: 1px solid #e8eaeb;
+}
+#total-table tr {
+    height: 50px;
+}
+.main-content{
+    margin-top: 30px;
+}
+.detail-line:hover{
+    background: #f2f9ff;
+}
+.menu{
+    width: 200px;
+    height: 100%;
+    position: fixed;
+    background: #5197ff;
+    padding: 52px 0px 0px 0px;
+    z-index: 2;
+    border-right: 1px solid #e8eaeb;
+}
+.menu-bar{
+    margin: 0px 3px 0px 3px;
+    border-radius: 3px;
+    color: #F3F4F5;
+    font-size: 18px;
+    padding: 25px 5px 25px 5px;
+    border-top: 1px solid #E8EAEB;
+}
+.menu-bar:hover{
+    background: #e5e5e542;
+    color: white;
+    cursor: pointer;
+}
+.menu-icon{
+    float: left;
+}
+.menu-txt{
+    display: inline-block;
+    margin:3px 0px 0px 13px;
+}
+#header{
+    height:52px;
+    width:100%;
+    box-shadow: 0px 2px 4px rgb(168 168 168/25%);
+    z-index: 1;
+    position: sticky;
+    background: white;
+    min-width: 442px;
+}
+.print-receipt{
+    display: inline-block;
+    border: 1px solid rgb(211, 213, 215);
+    background: white;
+    padding: 10px;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+.print-receipt:hover{
+    background-color:#f2f9ff;
+}
+.print-txt{
+    color:#747C87;
+    display:inline-block;
+    margin: 2px 0px 0px 10px;
+}
+#print-icon{
+    color:#747C87;
+    float:left;
+}
+.label-color{
+    color:#46515F;
+}
+.star-require{
+    display:inline;
+    color:red;
+}
+.bold-title{
+    font-weight:bold;
+    margin-bottom: 10px;
+    color: #46515F;
+}
+.error-label::after, .error-label{
+    margin-bottom: 11.7px;
+    color:red;
+}
+#report-start:invalid + .error-label::after {
+    content: 'Chọn ngày bắt đầu';
+}
+#report-end:invalid + .error-label::after {
+    content: 'Chọn ngày kết thúc';
+}
+#report-start, #report-end{
+    position: relative;
+}
+#report-end:invalid, #report-start:invalid{
+    border: 1px solid red;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background: transparent;
+    bottom: 0;
+    color: transparent;
+    cursor: pointer;
+    height: auto;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+}
+input {
+    outline: none;
+    height: 35px;
+    padding: 0 12px;
+    font-size: 14px;
+    width: 140px;
+    border:1px solid rgb(211 213 215);
+    border-radius: 3px;
+}
+.view-but:hover{
+    background:rgb(51, 160, 255);
+}
+.view-but{
+    display: none;
+    border:1px solid rgb(51, 160, 255);
+    border-radius:3px;
+    font-weight:bold;
+    font-size:14px;
+    padding:8px 20px 8px 20px;
+    color: white;
+    background:rgb(0, 136, 255);
+    cursor: pointer;
+}
+.div-start{
+    display:inline-block;
+    width:20%;
+}
+.div-end{
+    display:inline-block;
+    margin-left:5%;
+    width:25%;
+}
+#line-null{
+    background: white;
+    padding: 20px 0px;
+    display: none;
+}

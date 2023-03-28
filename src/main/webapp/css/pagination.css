@@ -1,0 +1,19 @@
+.pagination li {
+    font-size: 20px;
+    font-weight: 700;
+}
+.pagination li a {
+    text-decoration: none;
+    border: 1px solid #211c1c !important;
+    padding: 8px 19px !important;
+    color: black !important;
+}
+.pagination li a span:hover {
+    color: coral;
+}
+.pagination .active {
+    background-color: coral;
+}
+.pagination .active:hover {
+    background-color: rgba(255, 127, 80, 0.9);
+}

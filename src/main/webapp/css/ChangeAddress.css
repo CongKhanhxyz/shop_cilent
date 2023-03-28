@@ -1,0 +1,288 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    transition: all linear .2s;
+    position: relative;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 20px 0 20px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .1);
+}
+
+.header .logo img{
+    width: 100px;
+    height: auto;
+}
+.header .status{
+    position: relative;
+    width: 40%;
+}
+
+.header .status .title{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.header .status .title span:nth-child(1){
+    display: inline-block;
+    margin-right: 100px;
+    transform: translateX(-40%);
+}
+
+.header .status .title span:nth-child(2){
+    margin-right: 40px;
+}
+.header .status .title span:nth-child(3)
+{
+    display: inline-block;
+    transform: translateX(50%);
+}
+
+.header .status .processbar{
+    width: 100%;
+    height: 10px;
+    position: relative;
+    background-color: #ccc;
+    border-radius: 10px;
+}
+.header .status .processbar::before{
+    content: '1';
+    display: flex;
+    border: .2px solid #ccc;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #00b6f0;
+    transform: translateX(-25%) translateY(-25%);
+    box-shadow: 240px 0 0 #00b6f0;
+}
+
+.header .contact a em{
+    display: inline-block;
+    margin: 0 0.5rem;
+    animation: tada infinite; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s; /* don't forget to set a duration! */
+}
+
+.header .status .processbar::after{
+    content: '3';
+    position: absolute;
+    border: .2px solid #ccc;
+    width: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20px;
+    right: 0;
+    border-radius: 50%;
+    background-color: #00b6f0;
+    transform: translateY(-78%);
+}
+
+.header .status .processbar .percent{
+    width: 50%;
+    height: 100%;
+    background-color: #00b6f0;
+}
+
+.header .contact{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: .5px solid #ccc;
+    padding: 5px 8px;
+    border-radius: 60px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, .2),
+    -1px -1px 3px rgba(0, 0, 0, .1);
+}
+
+.header .contact a{
+    font-size: 24px;
+    color: white;
+    margin-right: 10px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border:1px solid black;
+    border-radius: 50%;
+    background-color: #00b6f0;
+}
+
+.header .contact p{
+    font-size: 18px;
+    color: #2ca62c;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    padding: 30px 70px;
+}
+
+.container h3, p {
+    margin-bottom: 10px;
+}
+
+.container .address {
+    padding: 10px 10px;
+    border-radius: 3px;
+    border: 1.3px dashed rgb(73, 121, 1);
+    width: 45%;
+}
+
+.container .address .address-name {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container .address p {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.container .address .address-name p {
+    color: rgb(146, 236, 10);
+}
+
+.container .address a {
+    margin-right: 5px;
+    padding: 5px 10px;
+    border-radius: 3px;
+    color: white;
+    margin-bottom: 5px;
+    background-color: #00b6f0;
+}
+
+.container .address :last-child {
+    background-color: transparent;
+    color: black;
+    border: .6px solid #ccc;
+}
+
+p.noname {
+    margin-left: 70px;
+    padding: 0 0;
+}
+
+p.noname a {
+    color: #00b6f0;
+}
+
+.changeAddress {
+    position: absolute;
+    top:15%;
+    right: 10%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 70px;
+    z-index: 2;
+    background-color: white;
+}
+
+.changeAddress .form {
+    display: flex;
+    width: 100%;
+    padding: 20px 0;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    justify-content: space-between;
+}
+
+.changeAddress .form #name{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.changeAddress .form #name label{
+    min-width: 120px;
+    font-size: 20px;
+}
+.changeAddress .form #name div{
+    max-width: 300px;
+    margin-left: 200px;
+}
+.changeAddress .form #name div input{
+    max-width: 148px;
+    padding: 6px 10px !important;
+    border-radius: 5px;
+    border: .5px solid aqua;
+}
+
+.changeAddress .form .item.two {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.changeAddress .form .item.two label {
+    min-width: 120px;
+    font-size: 20px;
+    transform: translateX(50px);
+}
+
+.changeAddress .form .item.two input, select, textarea {
+    min-width: 300px;
+    padding: 6px 5px;
+    border-radius: 5px;
+    transform: translateX(-250px);
+    border: .5px solid aqua;
+}
+
+.changeAddress .form .item.two input{
+    padding: 6px 10px !important;
+}
+
+.changeAddress .form .radio {
+    margin-left: 250px;
+    transform: translateX(-200px);
+}
+
+.changeAddress .form .radio :first-child {
+    font-size: 20px;
+}
+
+.changeAddress .form .radio input {
+    margin-left: 80px;
+    display: inline-block;
+}
+
+.bottom {
+    width: 100%;
+    padding: 15px 0;
+    text-align: center;
+    padding-left: 110px;
+    font-size: 14px;
+}
+
+.btn {
+    text-align: center;
+    padding-left: 225px;
+}
+
+.btn :first-child {
+    background-color: aliceblue;
+}
+
+.btn a {
+    padding: 8px 0;
+    display: inline-block;
+    min-width: 150px;
+    font-size: 14px;
+    margin-right: 10px;
+    border: 2px solid #ccc;
+    background-color: #00b6f0;
+}
