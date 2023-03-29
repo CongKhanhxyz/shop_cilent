@@ -152,40 +152,7 @@
 </head>
 
 <body>
-<script>
-    function statusChangeCallback(response) {
-        console.log(response);
-        if (response.status === 'connected') {
-            testAPI();
-            window.location.href = "LoginServlet?loginFB=" + response.authResponse.accessToken;
-        }
-    }
-    function checkLoginState() {
-        FB.getLoginStatus(function (response) {
-            statusChangeCallback(response);
-        });
-    }
-    window.fbAsyncInit = function () {
-        FB.init({
-            appId: '3012954795613233',
-            cookie: true,
-            xfbml: true,
-            version: 'v3.2'
-        });
-        FB.getLoginStatus(function (response) {
-            statusChangeCallback(response);
-        });
-    };
-    function testAPI() { // Testing Graph API after login.  See statusChangeCallback() for when this call is made.
-        console.log('Welcome!  Fetching your information.... ');
-        FB.api(
-            '/me',
-            function (response) {
-                console.log(response);
-            });
-    }
-</script>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+
 <div class="container">
     <div class="signin-signup">
         <div class="sign-in-form">
@@ -204,7 +171,7 @@
             </c:if>
             <div class="input-field">
                 <i class="fas fa-lock"></i>
-                <input type="text" placeholder="PassWord" name="password" id="password"
+                <input type="password" placeholder="PassWord" name="password" id="password"
                 value="${pw}">
             </div>
             <input type="submit" value="Login" class="btn solid" />
@@ -225,10 +192,6 @@
                     <i class="fab fa-linkedin-in"></i>
                 </a>
             </div>
-            </form>
-            <form action="/signin/facebook" method="POST">
-                <input type="hidden" name="scope" value="public_profile" />
-                <input type="submit" value="Login using Facebook" class="btn btn-primary" />
             </form>
         </div>
 
